@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>My First JS</title>
+</head>
+
+<body>
+  <hr>
+  <br>
+  <p>first_name : <input type="text" id="fnid" name="fntxt" value="" placeholder=" first name "></p>
+  <p>last_name : <input type="text" id="lnid" name="lntxt" value="" placeholder=" last name"></p>
+  <!-- <button onclick="alert('clicked')">SUM</button> -->
+  <button onclick="dothis()">Click</button>
+  <br>
+  <div id="result" style="color:blue; font-weight:bold;"></div>
+</body>
+
+<script>
+  function dothis() {
+
+    var first_name = document.getElementById("fnid").value
+    var last_name = document.getElementById("lnid").value
+
+    if (first_name.length == 0 || last_name.length == 0)
+        alert("too short");
+    else
+        document.getElementById("result").innerHTML = `${first_name.toUpperCase()} ${first_name.length} <br> ${last_name.toUpperCase()} ${last_name.length}`
+  }
+</script>
+
+</html>
